@@ -2,6 +2,7 @@ package com.ashraf.junit.helper;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -39,6 +40,28 @@ public class StringHelperTest {
 	}
 
 
+	
+
+	// ABCD => false, ABAB => true, AB => true, A => false
+	@Test
+	public void testAreFirstAndLastTwoCharactersTheSame_BasicNegativeScenario() {
+		assertFalse( 
+				helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+	}
+
+	@Test
+	public void testAreFirstAndLastTwoCharactersTheSame_BasicPositiveScenario() {
+		assertTrue( 
+				helper.areFirstAndLastTwoCharactersTheSame("ABAB"));
+	}
+
+	
+	@After
+	public void afterTestCase(){
+		helper = null;
+		System.out.println("@after....");
+	}
+	
 
 	
 }
