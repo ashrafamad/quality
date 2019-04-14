@@ -33,7 +33,6 @@ public class StringHelperTest {
 
 	
 	
-
 	@Test
 	public void testTruncateAInFirst2Positions_AinFirstPosition() {
 		assertEquals("CD", helper.truncateAInFirst2Positions("ACD"));
